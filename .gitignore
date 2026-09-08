@@ -1,0 +1,30 @@
+# Gradle / Loom build output
+.gradle/
+build/
+*/build/
+out/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+run/
+
+# Claude Code local tooling
+.claude/
+
+# Third-party mod jars used as compile-time references - not ours to redistribute.
+# See README for where to get them.
+libs/*.jar
+
+# Reference-only clones of the target mods' upstream source - not part of this mod,
+# kept locally for looking things up, each already has its own repo upstream.
+levelz-src/
+toughasnails-src/
+biomemakeover-src/
+vanillabackport-src/
+fabric-template/
+
+# OS cruft
+.DS_Store
+Thumbs.db

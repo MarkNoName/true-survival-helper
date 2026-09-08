@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "tsh",
+	"version": "${version}",
+	"name": "True Survival Helper",
+	"description": "Native compatibility layer for the True Survival modpack, fixing interactions between mods that don't work correctly together out of the box.",
+	"authors": [
+		"Mark"
+	],
+	"license": "MIT",
+	"icon": "assets/tsh/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.truesurvivalhelper.TrueSurvivalHelper"
+		]
+	},
+	"mixins": [
+		{
+			"config": "tsh-toughasnails.mixins.json",
+			"environment": "*"
+		},
+		{
+			"config": "tsh-biomemakeover.mixins.json",
+			"environment": "*"
+		},
+		{
+			"config": "tsh-vanillabackport.mixins.json",
+			"environment": "*"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*",
+		"levelz": "*"
+	},
+	"recommends": {
+		"toughasnails": "*",
+		"biomemakeover": "*",
+		"vanillabackport": "*"
+	}
+}

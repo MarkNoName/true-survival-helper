@@ -1,0 +1,14 @@
+{
+	"required": false,
+	"minVersion": "0.8",
+	"package": "net.truesurvivalhelper.mixin.vanillabackport",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+		"SpearItemMixin",
+		"PlayerAttackMixin",
+		"LivingEntityHurtMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

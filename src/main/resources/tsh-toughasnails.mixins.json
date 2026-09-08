@@ -1,0 +1,17 @@
+{
+	"required": false,
+	"minVersion": "0.8",
+	"package": "net.truesurvivalhelper.mixin.tan",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+		"EmptyCanteenItemMixin",
+		"EmptyCanteenItemAccessor",
+		"FilledCanteenItemMixin",
+		"CanteenTooltipMixin",
+		"WaterPurifierBlockMixin",
+		"ThermoregulatorBlockMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
