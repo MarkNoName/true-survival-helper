@@ -37,6 +37,24 @@ public final class LevelZSkillAccess {
 	}
 
 	/**
+	 * Like {@link #meetsLevel}, but without the creative-mode bypass. Use this (only)
+	 * for tooltip text, matching LevelZ's own tooltip checks - every one of them calls
+	 * PlayerStatsManager#playerLevelisHighEnough with creativeRequired=false, unlike its
+	 * interaction-blocking checks (creativeRequired=true) - so the tooltip always shows
+	 * the real requirement (e.g. for a creative-mode builder checking what survival
+	 * players will need), while actually USING the item/block still exempts creative.
+	 */
+	public static boolean meetsLevelForTooltip(Player player, Skill skill, int requiredLevel) {
+		if (requiredLevel <= 0) {
+			return true;
+		}
+		if (!(player instanceof PlayerStatsManagerAccess access)) {
+			return true;
+		}
+		return access.getPlayerStatsManager().getSkillLevel(skill) >= requiredLevel;
+	}
+
+	/**
 	 * Shows the same red action-bar denial message LevelZ's own restrictions show
 	 * (reuses LevelZ's own "item.levelz.&lt;skill&gt;.tooltip" translation keys), so a
 	 * block from this mod looks and reads exactly like a native LevelZ restriction.

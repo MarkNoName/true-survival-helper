@@ -13,9 +13,16 @@
 	"entrypoints": {
 		"main": [
 			"net.truesurvivalhelper.TrueSurvivalHelper"
+		],
+		"client": [
+			"net.truesurvivalhelper.TrueSurvivalHelperClient"
 		]
 	},
 	"mixins": [
+		{
+			"config": "tsh-client.mixins.json",
+			"environment": "client"
+		},
 		{
 			"config": "tsh-toughasnails.mixins.json",
 			"environment": "*"
@@ -26,6 +33,10 @@
 		},
 		{
 			"config": "tsh-vanillabackport.mixins.json",
+			"environment": "*"
+		},
+		{
+			"config": "tsh-levelz.mixins.json",
 			"environment": "*"
 		}
 	],

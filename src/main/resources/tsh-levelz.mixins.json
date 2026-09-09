@@ -1,11 +1,11 @@
 {
 	"required": true,
 	"minVersion": "0.8",
-	"package": "net.truesurvivalhelper.mixin.biomemakeover",
+	"package": "net.truesurvivalhelper.mixin.levelz",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"EnchantedTotemItemMixin",
-		"EnchantedTotemTooltipMixin"
+		"LevelLoaderMixin",
+		"SkillScrollableWidgetMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

@@ -44,7 +44,7 @@ public class CanteenTooltipMixin {
 			return;
 		}
 		int required = MaterialLevels.forCanteenTier(((EmptyCanteenItemAccessor) canteen).tsh$getTier());
-		if (!LevelZSkillAccess.meetsLevel(player, Skill.STAMINA, required)) {
+		if (!LevelZSkillAccess.meetsLevelForTooltip(player, Skill.STAMINA, required)) {
 			String key = "item.levelz." + Skill.STAMINA.toString().toLowerCase(Locale.ROOT) + ".tooltip";
 			cir.getReturnValue().add(Component.translatable(key, required).withStyle(ChatFormatting.RED));
 		}

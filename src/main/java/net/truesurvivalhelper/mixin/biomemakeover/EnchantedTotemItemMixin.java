@@ -16,15 +16,18 @@ import party.lemons.biomemakeover.item.EnchantedTotemItem;
  * Totem of Undying and can't give this item its own level). Failing the check simply
  * blocks activation - the totem is never consumed, matching "should only start working
  * at level 12".
+ *
+ * Deliberately silent (no denial feedback) - vanilla's own Totem of Undying does
+ * nothing at all when right-clicked outside of an actual death-save, and canActivate
+ * fires in that same "just holding/using it, not actually dying" context too, not only
+ * at the moment it would really save you. Showing a denial there would fire far more
+ * often than intended and doesn't match how the vanilla item behaves.
  */
 @Mixin(EnchantedTotemItem.class)
 public class EnchantedTotemItemMixin {
 	@Inject(method = "canActivate", at = @At("HEAD"), cancellable = true)
 	private void tsh$requireAlchemyLevel(LivingEntity entity, CallbackInfoReturnable<Boolean> cir) {
 		if (entity instanceof Player player && !LevelZSkillAccess.meetsLevel(player, Skill.ALCHEMY, 12)) {
-			if (!entity.level().isClientSide()) {
-				LevelZSkillAccess.sendDenialMessage(player, Skill.ALCHEMY, 12);
-			}
 			cir.setReturnValue(false);
 		}
 	}

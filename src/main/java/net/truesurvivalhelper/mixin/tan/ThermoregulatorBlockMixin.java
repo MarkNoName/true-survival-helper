@@ -16,16 +16,16 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import toughasnails.block.ThermoregulatorBlock;
 
 /**
- * Gates opening the Thermoregulator's screen behind Farming level 3.
+ * Gates opening the Thermoregulator's screen behind Farming level 3. Same
+ * openMenu-INVOKE injection as {@link WaterPurifierBlockMixin} - see there for the
+ * full explanation.
  */
 @Mixin(ThermoregulatorBlock.class)
 public class ThermoregulatorBlockMixin {
-	@Inject(method = "use", at = @At("HEAD"), cancellable = true)
+	@Inject(method = "use", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/player/Player;openMenu(Lnet/minecraft/world/MenuProvider;)Ljava/util/OptionalInt;"), cancellable = true)
 	private void tsh$requireFarmingLevel(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit, CallbackInfoReturnable<InteractionResult> cir) {
 		if (!LevelZSkillAccess.meetsLevel(player, Skill.FARMING, 3)) {
-			if (!level.isClientSide) {
-				LevelZSkillAccess.sendDenialMessage(player, Skill.FARMING, 3);
-			}
+			LevelZSkillAccess.sendDenialMessage(player, Skill.FARMING, 3);
 			cir.setReturnValue(InteractionResult.FAIL);
 		}
 	}
