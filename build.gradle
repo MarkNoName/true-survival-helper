@@ -30,6 +30,7 @@ dependencies {
 	modCompileOnly files('libs/ToughAsNails-fabric-1.20.1-9.2.0.171.jar')
 	modCompileOnly files('libs/biomemakeover-FABRIC-1.20.1-1.11.4.jar')
 	modCompileOnly files('libs/VanillaBackport-fabric-1.20.1-1.2.0.2636.1.jar')
+	modCompileOnly files('libs/spartan-kick-1.0.3.jar')
 }
 
 processResources {

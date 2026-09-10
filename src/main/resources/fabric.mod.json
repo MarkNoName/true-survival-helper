@@ -38,6 +38,10 @@
 		{
 			"config": "tsh-levelz.mixins.json",
 			"environment": "*"
+		},
+		{
+			"config": "tsh-spartankick.mixins.json",
+			"environment": "client"
 		}
 	],
 	"depends": {
@@ -50,6 +54,7 @@
 	"recommends": {
 		"toughasnails": "*",
 		"biomemakeover": "*",
-		"vanillabackport": "*"
+		"vanillabackport": "*",
+		"spartan-kick": "*"
 	}
 }
