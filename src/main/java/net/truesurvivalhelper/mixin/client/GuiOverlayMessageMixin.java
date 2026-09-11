@@ -54,7 +54,16 @@ public class GuiOverlayMessageMixin {
 			return;
 		}
 		Object[] args = contents.getArgs();
-		if (args.length == 0 || !(args[0] instanceof Integer level)) {
+		if (args.length == 0) {
+			return;
+		}
+		// Most of LevelZ's own denial messages pass the required level as a boxed Integer, but
+		// HoeItemMixin specifically pre-stringifies it (`.toString()` before boxing into the
+		// translatable's args) - parsing via toString() handles both without caring which.
+		int level;
+		try {
+			level = Integer.parseInt(args[0].toString());
+		} catch (NumberFormatException e) {
 			return;
 		}
 		DenialFeedback.trigger(skill, level);
