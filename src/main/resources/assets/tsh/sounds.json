@@ -1,0 +1,11 @@
+{
+	"blood_moon": {
+		"category": "ambient",
+		"sounds": [
+			{
+				"name": "tsh:blood_moon",
+				"stream": true
+			}
+		]
+	}
+}

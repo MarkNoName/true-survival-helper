@@ -30,3 +30,8 @@ The output jar lands in `build/libs/`.
 ## License
 
 MIT, see [LICENSE](LICENSE).
+
+## Credits & Licensing
+
+* Music: Lunar Event Ambient Music from [Enhanced Celestials](https://github.com/CorgiTaco-MC/Enhanced-Celestials) by CorgiTaco, composed by LudoCrypt.
+* License: Licensed under [GNU Lesser General Public License v3.0 (LGPL-3.0)](https://www.gnu.org/licenses/lgpl-3.0.html).
