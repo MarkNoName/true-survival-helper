@@ -12,9 +12,11 @@ generic redistributable addon.
 
 ## License
 
-MIT, see [LICENSE](LICENSE).
+All Rights Reserved, see [LICENSE](LICENSE). Not licensed for reuse, redistribution, or modification by others.
 
 ## Credits & Licensing
+
+The third-party asset below is excluded from the license above and remains under its own original license:
 
 * Music: Lunar Event Ambient Music from [Enhanced Celestials](https://github.com/CorgiTaco-MC/Enhanced-Celestials) by CorgiTaco, composed by LudoCrypt.
 * License: Licensed under [GNU Lesser General Public License v3.0 (LGPL-3.0)](https://www.gnu.org/licenses/lgpl-3.0.html).
