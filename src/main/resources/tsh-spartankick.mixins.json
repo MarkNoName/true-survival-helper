@@ -1,0 +1,12 @@
+{
+	"required": false,
+	"minVersion": "0.8",
+	"package": "net.truesurvivalhelper.mixin.spartankick",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+		"KickRendererMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

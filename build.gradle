@@ -1,0 +1,42 @@
+plugins {
+	id 'net.fabricmc.fabric-loom-remap' version "${loom_version}"
+}
+
+repositories {
+	flatDir {
+		dirs 'libs'
+	}
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	mappings loom.officialMojangMappings()
+	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+
+	modCompileOnly files('libs/levelz-true-survival-1.4.13.jar')
+	modCompileOnly files('libs/ToughAsNails-fabric-1.20.1-9.2.0.171.jar')
+	modCompileOnly files('libs/biomemakeover-FABRIC-1.20.1-1.11.4.jar')
+	modCompileOnly files('libs/VanillaBackport-fabric-1.20.1-1.2.0.2636.1.jar')
+	modCompileOnly files('libs/spartan-kick-1.0.3.jar')
+}
+
+processResources {
+	def version = project.version
+	inputs.property "version", version
+
+	filesMatching("fabric.mod.json") {
+		expand "version": version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.encoding = "UTF-8"
+	it.options.release = 17
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_17
+	targetCompatibility = JavaVersion.VERSION_17
+}
