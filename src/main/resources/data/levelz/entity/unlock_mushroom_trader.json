@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "skill": "trade",
+    "level": 3,
+    "entity": "minecraft:custom_entity",
+    "object": "biomemakeover:mushroom_trader"
+}

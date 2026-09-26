@@ -1,0 +1,30 @@
+{
+	"required": true,
+	"package": "net.truesurvivalhelper.mixin.client",
+	"compatibilityLevel": "JAVA_17",
+	"plugin": "net.truesurvivalhelper.mixin.client.GuiBackportMixinPlugin",
+	"client": [
+		"AbstractSelectionListMixin",
+		"ClientPacketListenerMixin",
+		"ControlsScreenMixin",
+		"CreateWorldScreenMixin",
+		"GameRendererMixin",
+		"GenericDirtMessageScreenMixin",
+		"LevelRendererMixin",
+		"OptionsMixin",
+		"OptionsSubScreenAccessor",
+		"PauseScreenMixin",
+		"PostChainMixin",
+		"ProgressScreenMixin",
+		"ReceivingLevelScreenMixin",
+		"RenderChunkMixin",
+		"ScreenMixin",
+		"SkinCustomizationScreenMixin",
+		"TabButtonMixin",
+		"TabNavigationBarMixin",
+		"TransferableSelectionListMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

@@ -1,0 +1,9 @@
+{
+    "replace": true,
+    "level": 3,
+    "item": [
+        "minecraft:phantom_membrane",
+	"biomemakeover:moth_scales",
+        "minecraft:turtle_helmet"
+    ]
+}

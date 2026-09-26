@@ -1,0 +1,12 @@
+{
+	"required": true,
+	"minVersion": "0.8",
+	"package": "net.truesurvivalhelper.mixin.sleeprework",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+		"ClientHandlerMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

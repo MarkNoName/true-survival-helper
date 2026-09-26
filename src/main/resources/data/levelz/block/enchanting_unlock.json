@@ -1,0 +1,11 @@
+{
+    "replace": false,
+    "skill": "alchemy",
+    "level": 2,
+    "block": "minecraft:enchanting_table",
+    "enchanting_tier": [
+        2,
+        5,
+        10
+    ]
+}

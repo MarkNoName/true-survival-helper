@@ -1,0 +1,10 @@
+{
+    "replace": false,
+    "level": 3,
+    "item": [
+	"biomemakeover:cladded_helmet",
+	"biomemakeover:cladded_chestplate",
+	"biomemakeover:cladded_leggings",
+	"biomemakeover:cladded_boots"
+    ]
+}

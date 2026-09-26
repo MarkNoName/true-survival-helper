@@ -1,0 +1,16 @@
+{
+	"required": true,
+	"package": "net.truesurvivalhelper.mixin.sodium",
+	"compatibilityLevel": "JAVA_17",
+	"plugin": "net.truesurvivalhelper.mixin.client.GuiBackportMixinPlugin",
+	"client": [
+		"SodiumChunkShaderInterfaceMixin",
+		"SodiumDefaultChunkRendererMixin",
+		"SodiumRenderRegionMixin",
+		"SodiumRenderSectionMixin",
+		"SodiumShaderLoaderMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

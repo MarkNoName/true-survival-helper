@@ -1,0 +1,9 @@
+{
+    "replace": true,
+    "level": 1,
+    "item": [
+        "minecraft:nether_wart",
+	"biomemakeover:wart",
+        "minecraft:rabbit_foot"
+    ]
+}

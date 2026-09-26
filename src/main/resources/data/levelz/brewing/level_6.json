@@ -1,0 +1,8 @@
+{
+    "replace": true,
+    "level": 6,
+    "item": [
+        "minecraft:pufferfish",
+        "minecraft:blaze_powder"
+    ]
+}

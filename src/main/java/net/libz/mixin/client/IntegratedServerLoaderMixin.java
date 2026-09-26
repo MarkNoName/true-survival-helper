@@ -1,0 +1,18 @@
+package net.libz.mixin.client;
+
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.ModifyVariable;
+
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.minecraft.client.gui.screens.worldselection.WorldOpenFlows;
+
+@Environment(EnvType.CLIENT)
+@Mixin(value = WorldOpenFlows.class, priority = 999)
+public class IntegratedServerLoaderMixin {
+	@ModifyVariable(method = "doLoadLevel(Lnet/minecraft/client/gui/screens/Screen;Ljava/lang/String;ZZ)V", at = @At(value = "INVOKE_ASSIGN", target = "Lnet/minecraft/world/level/storage/WorldData;worldGenSettingsLifecycle()Lcom/mojang/serialization/Lifecycle;"), ordinal = 1)
+	private boolean startMixin(boolean original) {
+		return false;
+	}
+}

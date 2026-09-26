@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:bush",
+    "minecraft:cactus_flower",
+    "minecraft:firefly_bush",
+    "minecraft:short_dry_grass",
+    "minecraft:tall_dry_grass",
+    "minecraft:open_eyeblossom",
+    "minecraft:closed_eyeblossom",
+    "minecraft:big_dripleaf"
+  ]
+}

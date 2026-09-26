@@ -1,0 +1,13 @@
+version:3465
+enableVsync:false
+realmsNotifications:false
+fullscreen:true
+darkMojangStudiosBackground:true
+guiScale:3
+graphicsMode:1
+lang:en_us
+tutorialStep:none
+hideBundleTutorial:true
+renderDistance:16
+simulationDistance:12
+key_key.spartankick.kick:key.keyboard.r

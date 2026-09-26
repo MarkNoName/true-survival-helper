@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"minVersion": "0.8",
+	"package": "net.truesurvivalhelper.mixin.loot",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+		"LootTableBuilderAccessor",
+		"LootTableStackingMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
