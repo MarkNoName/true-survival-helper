@@ -1,9 +1,21 @@
 {
+  "options.chunkFade": "Chunk Fade Time",
+  "options.chunkFade.none": "Chunk Fade: None",
+  "options.chunkFade.seconds": "Chunk Fade: %s second(s)",
+  "options.chunkFade.tooltip": "How long in seconds chunks should fade in when they're first rendered, if at all.",
   "text.levelz.object_prefix.biomemakeover:cladded": "Cladded",
   "text.levelz.object_info.leather_canteen": "Leather Canteen",
   "text.levelz.object_info.copper_canteen": "Copper Canteen",
   "text.levelz.object_info.iron_canteen": "Iron Canteen",
   "text.levelz.object_info.gold_canteen": "Gold Canteen",
   "text.levelz.object_info.diamond_canteen": "Diamond Canteen",
-  "text.levelz.object_info.netherite_canteen": "Netherite Canteen"
+  "text.levelz.object_info.netherite_canteen": "Netherite Canteen",
+  "text.levelz.object_icon.leather_canteen": "toughasnails:empty_leather_canteen",
+  "text.levelz.object_icon.copper_canteen": "toughasnails:empty_copper_canteen",
+  "text.levelz.object_icon.iron_canteen": "toughasnails:empty_iron_canteen",
+  "text.levelz.object_icon.gold_canteen": "toughasnails:empty_gold_canteen",
+  "text.levelz.object_icon.diamond_canteen": "toughasnails:empty_diamond_canteen",
+  "text.levelz.object_icon.netherite_canteen": "toughasnails:empty_netherite_canteen",
+  "tsh.selectWorld.versionMismatch.title": "Different Version",
+  "tsh.selectWorld.versionMismatch.message": "This world was last played on version %s, but the pack is now on %s. Some newer content may not have been applied to it yet. Load anyway?"
 }

@@ -11,5 +11,6 @@ public class TrueSurvivalHelperClient implements ClientModInitializer {
 		DenialOverlayRenderer.register();
 		BloodMoonSounds.register();
 		BloodMoonClientState.register();
+		TshClouds.register();
 	}
 }

@@ -4,7 +4,24 @@
 	"package": "net.truesurvivalhelper.mixin.client",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"GuiOverlayMessageMixin"
+		"CreateWorldMoreTabMixin",
+		"DebugScreenOverlayMixin",
+		"FaceBakeryMixin",
+		"GuiOverlayMessageMixin",
+		"ItemModelGeneratorMixin",
+		"LevelSummaryMixin",
+		"MinecraftTitleMixin",
+		"OnlineOptionsScreenMixin",
+		"OptionInstanceAccessor",
+		"OptionsDefaultsMixin",
+		"OptionsScreenMixin",
+		"PackSelectionScreenMixin",
+		"ScreenAccessor",
+		"TitleScreenMixin",
+		"VideoSettingsScreenMixin",
+		"WindowIconMixin",
+		"WorldCreationUiStateMixin",
+		"WorldListEntryMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

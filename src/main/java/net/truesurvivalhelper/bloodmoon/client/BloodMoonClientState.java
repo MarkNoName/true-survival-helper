@@ -60,10 +60,6 @@ public final class BloodMoonClientState {
 		}
 	}
 
-	public static boolean isActive() {
-		return active;
-	}
-
 	public static float getBlend() {
 		float target = active ? 1.0F : 0.0F;
 		long elapsed = System.currentTimeMillis() - lastToggleTime;

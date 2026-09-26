@@ -8,6 +8,14 @@ repositories {
 	}
 }
 
+sourceSets {
+	main {
+		resources {
+			srcDir 'ts_config'
+		}
+	}
+}
+
 dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings loom.officialMojangMappings()
@@ -15,11 +23,16 @@ dependencies {
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
-	modCompileOnly files('libs/levelz-true-survival-1.4.13.jar')
 	modCompileOnly files('libs/ToughAsNails-fabric-1.20.1-9.2.0.171.jar')
 	modCompileOnly files('libs/biomemakeover-FABRIC-1.20.1-1.11.4.jar')
 	modCompileOnly files('libs/VanillaBackport-fabric-1.20.1-1.2.0.2636.1.jar')
 	modCompileOnly files('libs/spartan-kick-1.0.3.jar')
+	modCompileOnly files('libs/sodium-fabric-0.5.13+mc1.20.1.jar')
+	modCompileOnly files('libs/sleeprework-FABRIC-beta-1.20.1-1.1.0.jar')
+	modCompileOnly files('libs/architectury-9.2.14-fabric.jar')
+	modCompileOnly files('libs/lambdynamiclights-4.4.0+1.20.1.jar')
+	modCompileOnly files('libs/lambdynamiclights-api-4.4.0+1.20.1.jar')
+	modCompileOnly files('libs/spruceui-6.2.1+1.20.jar')
 }
 
 processResources {
@@ -39,4 +52,10 @@ tasks.withType(JavaCompile).configureEach {
 java {
 	sourceCompatibility = JavaVersion.VERSION_17
 	targetCompatibility = JavaVersion.VERSION_17
+}
+
+jar {
+	from("LICENSE") {
+		into "META-INF"
+	}
 }

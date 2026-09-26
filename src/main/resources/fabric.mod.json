@@ -2,23 +2,42 @@
 	"schemaVersion": 1,
 	"id": "tsh",
 	"version": "${version}",
+	"provides": [
+		"levelz",
+		"libz"
+	],
 	"name": "True Survival Helper",
-	"description": "Native compatibility layer for the True Survival modpack, fixing interactions between mods that don't work correctly together out of the box.",
+	"description": "Native compatibility layer for the True Survival modpack, fixing interactions between mods that don't work correctly together out of the box. Includes modified versions of LevelZ and LibZ by Globox_Z.",
 	"authors": [
 		"Mark"
 	],
-	"license": "All-Rights-Reserved",
+	"contributors": [
+		"Globox_Z"
+	],
+	"license": "GPL-3.0-only",
 	"icon": "assets/tsh/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
+			"net.libz.LibzMain",
+			"net.levelz.LevelzMain",
 			"net.truesurvivalhelper.TrueSurvivalHelper"
 		],
 		"client": [
+			"net.libz.LibzClient",
+			"net.levelz.LevelzClient",
 			"net.truesurvivalhelper.TrueSurvivalHelperClient"
 		]
 	},
 	"mixins": [
+		{
+			"config": "tsh-libz.mixins.json",
+			"environment": "client"
+		},
+		{
+			"config": "tsh-levelz.mixins.json",
+			"environment": "*"
+		},
 		{
 			"config": "tsh-client.mixins.json",
 			"environment": "client"
@@ -36,10 +55,6 @@
 			"environment": "*"
 		},
 		{
-			"config": "tsh-levelz.mixins.json",
-			"environment": "*"
-		},
-		{
 			"config": "tsh-spartankick.mixins.json",
 			"environment": "client"
 		},
@@ -50,6 +65,22 @@
 		{
 			"config": "tsh-bloodmoon-client.mixins.json",
 			"environment": "client"
+		},
+		{
+			"config": "tsh-guibackport.mixins.json",
+			"environment": "client"
+		},
+		{
+			"config": "tsh-guibackport-sodium.mixins.json",
+			"environment": "client"
+		},
+		{
+			"config": "tsh-loot.mixins.json",
+			"environment": "*"
+		},
+		{
+			"config": "tsh-sleeprework.mixins.json",
+			"environment": "client"
 		}
 	],
 	"depends": {
@@ -59,10 +90,16 @@
 		"fabric-api": "*"
 	},
 	"recommends": {
-		"levelz": "*",
 		"toughasnails": "*",
 		"biomemakeover": "*",
 		"vanillabackport": "*",
-		"spartan-kick": "*"
+		"spartan-kick": "*",
+		"sodium": "*",
+		"sleeprework": "*",
+		"snowrealmagic": "*",
+		"lambdynlights": "*"
+	},
+	"breaks": {
+		"true_survival_level_z": "*"
 	}
 }
